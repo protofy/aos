@@ -51,15 +51,28 @@ $val-lg: 100vw;
  * fade-up-right, fade-up-left, fade-down-right, fade-down-left
  */
 
-[data-aos^='fade'][data-aos^='fade'] {
-  opacity: 0;
-  transition-property: opacity, transform;
+ data-aos^='fade'][data-aos^='fade']:not([data-aos^='fade-in']) {
+   opacity: 0;
+   transition-property: opacity, transform;
 
-  &.aos-animate {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
+   &.aos-animate {
+     opacity: 1;
+     transform: translate(0, 0);
+   }
+ }
+
+ [data-aos^='fade'][data-aos='fade-in'] {
+   opacity: 0;
+   transition-property: opacity;
+
+   &.aos-animate {
+     opacity: 1;
+   }
+ }
+
+ [data-aos='fade-in'] {
+   opacity: 0;
+ }
 
 [data-aos='fade-up'] {
   transform: translate(0, $val-sm);
