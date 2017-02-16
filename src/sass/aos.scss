@@ -51,7 +51,7 @@ $val-lg: 100vw;
  * fade-up-right, fade-up-left, fade-down-right, fade-down-left
  */
 
- data-aos^='fade'][data-aos^='fade']:not([data-aos^='fade-in']) {
+[data-aos^='fade'][data-aos^='fade']:not([data-aos^='fade-in']) {
    opacity: 0;
    transition-property: opacity, transform;
 
